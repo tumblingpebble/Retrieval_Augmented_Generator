@@ -1,0 +1,413 @@
+    1  sudo apt install cmake make g++ gdb man-db -y
+    2  sudo aput update
+    3  sudo apt update
+    4  sudo apt upgrade -y
+    5  sudo apt install cmake make g++ gdb man-db -y
+    6  sudo apt install git -y
+    7  git clone https://github.com/rr-debugger/rr.git
+    8  cd rr
+    9  cmake .
+   10  sudo dpkg --add-architecture i386
+   11  sudo apt update
+   12  sudo apt install gcc-multilib g++-multilib libc6-dev-i386
+   13  rm -rf CMakeCache.txt CMakeFiles
+   14  cmake .
+   15  sudo apt install cmake make g++ gdb man-db git gcc-multilib g++-multilib libc6-dev-i386 pkg-config
+   16  rm -rf CMakeCache.txt CMakeFiles
+   17  cmake .
+   18  sudo apt install capnproto
+   19  rm -rf CMakeCache.txt CMakeFiles
+   20  cmake .
+   21  sudo apt install capnproto libleveldb-dev
+   22  rm -rf CMakeCache.txt CMakeFiles
+   23  cmake .
+   24  sudo apt update
+   25  sudo apt install capnproto libcapnp-dev
+   26  rm -rf CMakeCache.txt CMakeFiles
+   27  cmake .
+   28  sudo apt update
+   29  apt list --upgradeable
+   30  sudo apt install capnproto libcapnp-dev
+   31  capnp --version
+   32  sudo apt install autoconf automake libtool
+   33  git clone https://github.com/capnproto/capnproto.git
+   34  cd capnproto/c++
+   35  git checkout master
+   36  autoreconf -i
+   37  ./configure
+   38  make -j4
+   39  sudo make install
+   40  rm -rf CMakeCache.txt CMakeFiles
+   41  cmake .
+   42  make -j4
+   43  sudo make install
+   44  rr record /bin/ls
+   45  ls
+   46  rr- eversion
+   47  cd ..
+   48  cd
+   49  ls
+   50  cd rr
+   51  ls
+   52  sudo apt-get install ccache cmake make g++-multilib gdb lldb   pkg-config coreutils python3-pexpect manpages-dev git   ninja-build capnproto libcapnp-dev zlib1g-dev libzstd-dev
+   53  rr record /bin/ls
+   54  git clone https://github.com/rr-debugger/rr.git
+   55  mkdir obj && cd obj
+   56  cmake -DCMAKE_BUILD_TYPE=Release ../rr
+   57  make -j8
+   58  sudo make install
+   59  cd ~/rr
+   60  rm -rf CMakeCache.txt CMakeFiles
+   61  make -j8
+   62  sudo make install
+   63  ls
+   64  cd obj
+   65  ls
+   66  make -j8
+   67  ls
+   68  cd bin
+   69  ls
+   70  ./rr
+   71  cd .
+   72  cd ..
+   73  ls
+   74  sudo make install
+   75  rr record /bin/ls
+   76  rr record bin/ls
+   77  $ sudo sysctl kernel.perf_event_paranoid=1
+   78  sudo sysctl kernel.perf_event_paranoid=1
+   79  echo 'kernel.perf_event_paranoid=1' | sudo tee '/etc/sysctl.d/51-enable-perf-events.conf'
+   80  rr record bin/ls
+   81  run perf
+   82  perf
+   83  ./perf/perf
+   84  cd /tmp/obj
+   85  cd 
+   86  ls
+   87  cd ..
+   88  ls
+   89  cd tumblingpebble/
+   90  ls
+   91  cd ~
+   92  ls
+   93  ls -a
+   94  ssh mysterymeat@csil.cs.ucsb.edu
+   95  ssh jon36@csil.cs.ucsb.edu
+   96  ls -a
+   97  cd .ssh
+   98  ;s
+   99  ls
+  100  ls -a
+  101  ssh jon36@csil.cs.ucsb.edu
+  102  ssh action
+  103  history
+  104  rr
+  105  cd download/
+  106  ls
+  107  g++ -o buggey example1.cpp
+  108  g++ -o buggey example.cpp
+  109  ./buggey
+  110  history
+  111  rr record ./buggey
+  112  rr record example.cpp
+  113  $ sudo sysctl kernel.perf_event_paranoid=1
+  114  rr
+  115  uname -r
+  116  sudo sysctl kernel.perf_event_paranoid=1
+  117  echo 'kernel.perf_event_paranoid=1' | sudo tee '/etc/sysctl.d/51-enable-perf-events.conf'
+  118  rr record ./buggey
+  119  rr record example.cpp
+  120  cd /tmp
+  121  wget https://github.com/rr-debugger/rr/releases/download/5.8.0/rr-5.8.0-Linux-$(uname -m).deb
+  122  sudo dpkg -i rr-5.8.0-Linux-$(uname -m).deb
+  123  sudo sysctl kernel.perf_event_paranoid=1
+  124  rr record ./buggey
+  125  rr record example.cpp
+  126  rr
+  127  lscpu | grep "Flags"
+  128  ls /sys/devices
+  129  sudo rr record example.cpp
+  130  sudo apt-get install linux-perf
+  131  sudo perf stat -e cycles ls
+  132  sudo apt-get update
+  133  sudo apt-get install linux-tools-common linux-tools-$(uname -r)
+  134  perf stat -e ex_ret_cond true
+  135  sudo perf stat -e cycles ls
+  136  sudo nano /etc/default/grub
+  137  uname -r
+  138  sudo apt-get install ccache cmake make g++-multilib gdb lldb   pkg-config coreutils python3-pexpect manpages-dev git   ninja-build capnproto libcapnp-dev zlib1g-dev libzstd-dev
+  139  dmesg | grep PMU
+  140  apt install flex bison
+  141  sudo apt install flex bison
+  142  git clone https://github.com/microsoft/WSL2-Linux-Kernel --depth 1
+  143  cd WSL2-Linux-Kernel/tools/perf
+  144  make -j8
+  145  sudo cp perf /usr/local/bin
+  146  ls
+  147  perf
+  148  rr record ./buggey
+  149  sudo rr record example.cpp
+  150  sudo sysctl kernel.perf_event_paranoid=1
+  151  echo 'kernel.perf_event_paranoid=1' | sudo tee '/etc/sysctl.d/51-enable-perf-events.conf'
+  152  rr record ./buggey
+  153  sudo rr record example.cpp
+  154  cd ..
+  155  cd
+  156  ls
+  157  cd rr
+  158  ls
+  159  cd obj
+  160  ls
+  161  cd 
+  162  cd rr
+  163  history
+  164  cd
+  165  rm -rf ~/rr
+  166  rm -rf /tmp/obj
+  167  sudo rm /usr/local/bin/rr
+  168  sudo apt-get install ccache cmake make g++-multilib gdb lldb   pkg-config coreutils python3-pexpect manpages-dev git   ninja-build capnproto libcapnp-dev zlib1g-dev libzstd-dev
+  169  sudo apt update && sudo apt upgrade
+  170  git clone https://github.com/rr-debugger/rr.git
+  171  mkdir obj && cd obj
+  172  cmake -DCMAKE_BUILD_TYPE=Release ../rr
+  173  make -j8
+  174  sudo make install
+  175  rr record ./buggey
+  176  perf
+  177  rr record ./buggey
+  178  sudo sysctl kernel.perf_event_paranoid=1
+  179  echo 'kernel.perf_event_paranoid=1' | sudo tee '/etc/sysctl.d/51-enable-perf-events.conf'
+  180  rr record ./buggey
+  181  pwd
+  182  cd ..
+  183  pwd
+  184  ls
+  185  cd download/
+  186  ls
+  187  rr record example.cpp
+  188  rr record ./buggey
+  189  perf stat -e ex_ret_cond true
+  190  perf stat -e ex_ret_cond
+  191  perf stat -e 
+  192  perf list
+  193  ls
+  194  cd
+  195  ls
+  196  cd download/
+  197  ls
+  198  g++ -g -o buggey example.cpp
+  199  rr record ./buggey
+  200  whereis python
+  201  whereis python3
+  202  sudo apt update
+  203  sudo apt install software-properties-common
+  204  sudo add-apt-repository ppa:deadsnakes/ppa
+  205  sudo apt install python3.8
+  206  python3.8 --version
+  207  python3.8 -m venv myenv
+  208  pip3 --version
+  209  sudo apt install python3-pip
+  210  sudo apt install python3.8-venv
+  211  sudo apt install libssl-dev
+  212  python3.8 -m venv myenv
+  213  source myenv/bin/activate
+  214  python --version
+  215  pip --version
+  216  pip install langchain openai jupyterlab
+  217  export OPENAI_API_KEY='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'
+  218  mkdir llm_vulnerability_triage
+  219  cd llm_vulnerability_triage/
+  220  mkdir tools
+  221  touch tools/__init__.py
+  222  touch tools/retrieve_source.py
+  223  touch tools/find_callers.p
+  224  touch main.py
+  225  code retrieve_source.py
+  226  code find_callers.py
+  227  code main.py 
+  228  pip install pylint
+  229  pip install openai langchain
+  230  pip install --upgrade pip
+  231  pip install openai langchain
+  232  pip install -qU langchain-openai
+  233  python3 main.py 
+  234  deactivate
+  235  mv ~/myenv ~/llm_vulnerability_triage/myenv
+  236  source llm_vulnerability_triage/myenv/bin/activate
+  237  ls
+  238  cd myenv
+  239  ls
+  240  cd .
+  241  source /myenv/bin/activate
+  242  source bin/activate
+  243  cd .
+  244  cd ..
+  245  ls
+  246  python3 main.py 
+  247  pip list
+  248  pip install openai langchain
+  249  pip list
+  250  python3 main.py 
+  251  pip install langchain[llms]
+  252  python3 main.py 
+  253  pip list
+  254  pip install langchain_openai
+  255  pip list
+  256  python3 main.py 
+  257  history
+  258  pip list
+  259  python3 main.py 
+  260  ls
+  261  cd llm_vulnerability_triage/
+  262  ls
+  263  python3 main.py
+  264  pip list
+  265  python3 main.py
+  266  export OPENAI_API_KEY='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'
+  267  python3 main.py
+  268  sudo apt update
+  269  apt list --upgradable
+  270  python3 main.py
+  271  history
+  272  python3 main.py
+  273  pip install python-dotenv ipykernel youtube-transcript-api pytube
+  274  python3 main.py
+  275  pip install rr-lang
+  276  sudo pip install rr-lang
+  277  history
+  278  source /myenv/bin/activate
+  279  ls
+  280  source myenv/bin/activate
+  281  ls
+  282  mkdir debug_asst
+  283  mkdir debug_asst/tools
+  284  mkdir debug_asst/chains
+  285  mkdir debug_asst/agents
+  286  mkdir debug_asst/utils
+  287  cd debug_asst/
+  288  code main.py
+  289  cd tools/
+  290  code __init__.py
+  291  code retrieve_source_code.py
+  292  code find_callers.py
+  293  code step_forward.py
+  294  code step_backward.py
+  295  cd /chains/
+  296  cd ../chains
+  297  code __init__.py
+  298  code interaction_chain.py
+  299  code ../agents/__init__.py
+  300  cd ../agents/
+  301  ls
+  302  code debugging_agent.py
+  303  code ../utils/__init__.py
+  304  cd ..
+  305  cd utils/
+  306  code rr_command.py
+  307  cd ..
+  308  python main.py
+  309  python3 main.py
+  310  code .env
+  311  pip list
+  312  python3 main.py
+  313  pip install langchain_community
+  314  python3 main.py
+  315  pip install -U langchain-openai
+  316  python3 main.py
+  317  code example.py
+  318  python3 main.py
+  319  ls
+  320  code /agents/create_openai_functions_agent
+  321  cd agents/
+  322  code create_openai_functions_agent
+  323  cd ..
+  324  python3 main.py
+  325  pip install -U langchain langchain-community langchain-openai
+  326  python3 main.py
+  327  pip install -U langchain-community langchain-openai
+  328  python3 main.py
+  329  pip install -U langchain langchain-community langchain-openai
+  330  python3 main.py
+  331  pip install -U langchain langchain-community langchain-openai
+  332  source aienv/bin/activate
+  333  cd agentai/
+  334  source aienv/bin/ctivate
+  335  source aienv/bin/activate
+  336  python3 main.py
+  337  python3 create_database.py.py
+  338  python3 create_database.py
+  339  pip install "unstructured[md]"
+  340  python3 create_database.py
+  341  python3 query_data.py 
+  342  python3 query_data.py "tell me about retrieval agents"
+  343  python3 query_data.py "how do i create agents"
+  344  python3 query_data.py "how do i create an xml agent"
+  345  ls
+  346  cd ..
+  347  ls
+  348  cd langchain-api/
+  349  ls
+  350  cd _build
+  351  find . > file_list.txt
+  352  cd ..
+  353  ls
+  354  cd api_reference_build/
+  355  ls
+  356  cd markdown/
+  357  ls
+  358  find . > file_list2.txt
+  359  ls
+  360  cd ..
+  361  ls
+  362  cd ..
+  363  ls
+  364  cd agentai/
+  365  ls
+  366  cd data
+  367  rm -rf *
+  368  cd ..
+  369  ls
+  370  chmod +x copy_files.sh 
+  371  ./copy_files.sh
+  372  find /home/tumblingpebble/download/langchain-api -type f -name "langchain_community.document_loaders.google_drive.GoogleDriveLoader"
+  373  ./copy_files.sh
+  374  ls
+  375  cd copied_files/
+  376  ls
+  377  find . -type f -name "*.html" -delete
+  378  find . -type f -name "*.doctree" -delete
+  379  cd ..
+  380  ls
+  381  python3 create_database.py 
+  382  python3 query_data.py "What are the best practices for configuring LangChain for a debugging assistant application?"
+  383  python3 query_data.py "Which LangChain modules are essential for building a debugging tool?
+"
+  384  python3 create_database.py 
+  385  python3 query_data.py "Which LangChain modules are essential for building a debugging tool?
+"
+  386  python3 query_data.py "What are the best practices for configuring LangChain for a debugging assistant application?"
+  387  python3 query_data.py "Which LangChain modules are essential for loading and processing Python source code files?"
+  388  python3 query_data.py "What are the best practices for configuring LangChain with OpenAI's API?"
+  389  python3 query_data.py "How to implement a custom callback handler in LangChain for monitoring API usage?"
+  390  python3 query_data.py "How to use LangChain to create a vector store with Pinecone for storing embeddings?"
+  391  python3 query_data.py "What are the steps to set up a question-answering chain in LangChain?"
+  392  python3 query_data.py "How to integrate LangChain with GDB for interactive debugging?"
+  393  python3 query_data.py "What document loaders does LangChain provide for PDF processing?"
+  394  python3 query_data.py "How to configure LangChain's Redis vector store for efficient retrieval?"
+  395  python3 query_data.py "What are the common use cases for LangChain's MarkdownTextSplitter?"
+  396  python3 query_data.py "How to use LangChain's text splitters for segmenting Java code files?"
+  397  python3 query_data.py "List modules for loading Python code in LangChain."
+  398  python3 query_data.py "How to configure LangChain with OpenAI?"
+  399  python3 query_data.py "How to create a custom callback in LangChain?
+"
+  400  python3 query_data.py "Steps to set up Pinecone vector store in LangChain."
+  401* 
+  402  python3 query_data.py "How to create a custom callback in LangChain?
+"
+  403  python3 query_data.py "Steps to set up Pinecone vector store in LangChain."
+  404  python3 query_data.py "How to initialize and use `BaiduBOSFileLoader` in LangChain?"
+  405  python3 query_data.py "How to initialize and use BaiduBOSFileLoader in LangChain?"
+  406  ./copy_files.sh 
+  407  find . -type f -name "*.html" -delete
+  408  find . -type f -name "*.doctree" -delete
+  409  history > history.txt
